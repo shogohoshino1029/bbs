@@ -1,0 +1,49 @@
+// COLORS
+// @include cl(black);
+//--------------------------------------------------
+
+$colors: (
+	white: #fff,
+	black: #000,
+    grey: #D3D3D3,
+	lightgrey: #F2F2F2,
+	darkgrey:#333,
+);
+
+@function cl($key) {
+	@return map-get($colors, $key);
+}
+
+// FONT
+// @include TimesNewRoman;
+//--------------------------------------------------
+
+@mixin TimesNewRoman {
+	font-family: "proxima-nova", "source-han-sans-japanese" , sans-serif;
+}
+
+// RESPONSIVE
+// @include overTab
+//--------------------------------------------------
+
+@mixin overTab{
+	@media screen and (max-width: 600px) {
+		@content;
+	}
+}
+
+// UTILITY
+//--------------------------------------------------
+
+._sp{
+	@include overTab {
+		display:none;
+	}
+}
+
+._pc {
+	display:none;
+	@include overTab {
+		display:block;
+	}
+}
