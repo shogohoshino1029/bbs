@@ -1,0 +1,52 @@
+.work-main{
+    position:relative;
+
+    .slider{
+        height:60vh;
+
+        .slide-wrap{
+            height:60vh;
+            position:relative;
+
+            a{
+                display:block;
+                height:100%;
+                position:relative;
+                z-index:100;
+
+                img{
+                    height:100%;;
+                    object-fit:cover;
+                    filter:brightness(50%);
+                }
+                .view-wrap{
+                    z-index:100;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    display:block;
+                    width:100%;
+                    margin:0;
+                    box-sizing:border-box;
+                    height:auto;
+                    text-align:center;
+                    transform:translate(-50%,-50%);
+                    color:cl(white);
+                    transition:2s;
+
+                    .t{
+                        font-weight:bold;
+                        font-size:1.25rem;
+                    }
+                    .st{
+                        color:cl(lightgrey);
+                    }
+                    .d{
+                        color:cl(grey);
+                        font-size:0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
